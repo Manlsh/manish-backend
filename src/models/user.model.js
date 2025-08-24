@@ -77,7 +77,6 @@ userSchema.methods.generateRefreshToken = async function(){
   jwt.sign(
     {
       _id: this._id,
-    
     },
     process.env.REFRESH_TOKEN_SECRET,
     {
@@ -86,4 +85,4 @@ userSchema.methods.generateRefreshToken = async function(){
   )
 }
 
-export const User = mongoose.model("User", userSchema)
+export const User = mongoose.model("User", userSchema);
